@@ -1,5 +1,17 @@
+from account import Account
+
 class Car:
     id = int
     license = str
-    driver = str
+    driver = Account("","")
     passenger = int
+
+    def __init__(self,license,driver):
+        self.license = license
+        self.driver = driver
+    
+    def drive(self):
+        print(self.driver + "está conduciendo")
+
+    def stop(self):
+        print("Este auto está detenido")
